@@ -8,4 +8,4 @@ services:
             - 80:80
         volumes:
             - ./../:/var/www/html:z
-        container_name: php_httpd
+        container_name: php_httpd_74
