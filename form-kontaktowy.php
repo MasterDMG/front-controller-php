@@ -10,7 +10,7 @@ if($_POST){
     $nazwa=$_POST['im'];
     $data=date("Y-m-d");
     $czas=date("H-i-s");
-    $file=fopen("$data-$czas-$nazwa.txt","w");
+    $file=fopen("formularze/$data-$czas-$nazwa.txt","w");
     fputs($file, $_POST["in"]);
     fclose($file);
 }
