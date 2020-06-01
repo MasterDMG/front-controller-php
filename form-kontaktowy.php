@@ -1,26 +1,39 @@
-<form name="Kontakt" method="POST" >
-		Tytul :<input type="text" name="im" ><br>
-		Treść :<textarea name="in"></textarea><br>
-		
-		<input type="submit">
-	</form>
 <?php
 
+/**
+ * Zamiast tytułu użyj algorytmu hashującego (np md5) aby ostatni czlon nazwy pliku był 8 cyfrowym hashem
+ */
+
 if($_POST){
-    $nazwa=$_POST['im'];
-    $data=date("Y-m-d");
-    $czas=date("H-i-s");
-    $file=fopen("formularze/$data-$czas-$nazwa.txt","w");
-    fputs($file, $_POST["in"]);
-    fclose($file);
+    
+    
+function szyfruj($k, &$title ){
+	$length=strlen($title); 
+	if($k >= 0)
+		for($i=0;$i<$length;$i++){
+			$x=ord($title[$i]);
+		    if($x+$k<=ord('Z')){
+				$x+=$k;
+				$title[$i]=chr($x);
+			}
+			else {
+				$x=$x+$k-26;
+				$title[$i]=chr($x);
+			}
+		}
+	else
+		for($i=0;$i<$length;$i++)
+		    if($title[$i]+$k>='A')$title[$i]+=$k;
+		    else $title[$i] = $title[$i] + $k + 26;
+    return $title;
+    }
+$fileName = \sprintf(
+    'forms/%s-%s.txt',
+    \date('Y-m-d-H-i-s'),
+    szyfruj(10, $_POST["title"])
+);
+    \file_put_contents($fileName, $_POST['content']);
 }
 
-
-
-
-
-/**
- * Utwórz formularz kontaktowy na stronie localhost/kontakt który zostanie wysłany na skrypt wyslij-formularz.php który spowoduje zapisanie treści formularza 
- * do pliku w katalogu formularze/ o formacie YYYY-mm-dd-HH-ii-ss-temat-formularza.txt
- * Formularz powinien zawierać takie pola jak temat oraz treść, oraz przycisk wyslij który spowoduje wysyłkę formularza
- */
+header('Location: http://localhost/kontakt');
+exit;

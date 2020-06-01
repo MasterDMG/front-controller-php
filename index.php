@@ -8,6 +8,10 @@ switch ($_SERVER['REQUEST_URI']) {
         require_once('kontakt.php');
         break;    
 
+    case '/wyslij-formularz':
+        require_once('form-kontaktowy.php');
+        break;
+
     default:
         require_once('404.php');
         break;
