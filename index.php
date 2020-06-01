@@ -1,15 +1,15 @@
 <?php
 switch ($_SERVER['REQUEST_URI']) {
     case '/':
-        require_once('strona-glowna.php');
+        require_once('home.php');
         break;
     
     case '/kontakt':
-        require_once('kontakt.php');
+        require_once('contact.php');
         break;    
 
     case '/wyslij-formularz':
-        require_once('form-kontaktowy.php');
+        require_once('contact_form.php');
         break;
 
     default:

@@ -7,7 +7,21 @@
  */
 
 echo 
-'<form name="Kontakt" method="POST" action="http://localhost/wyslij-formularz">
+'
+<head>
+<style>
+    body{
+        text-align: center;
+
+    }
+    textarea{
+        width: 350px;
+        height: 275px;
+    }
+        </style>
+</head>
+
+<form name="Kontakt" method="POST" action="http://localhost/wyslij-formularz">
     Tytul :<input type="text" name="title" required><br>
     Treść :<textarea name="content"></textarea><br>
     
