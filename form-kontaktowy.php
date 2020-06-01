@@ -7,24 +7,11 @@
 if($_POST){
     
     
-function encrypt($k, &$title ){
-	$length=strlen($title); 
-	if($k >= 0)
-		for($i=0;$i<$length;$i++){
-			$x=ord($title[$i]);
-		    if($x+$k<=ord('Z')){
-				$x+=$k;
-				$title[$i]=chr($x);
-			}
-			else {
-				$x=$x+$k-26;
-				$title[$i]=chr($x);
-			}
-		}
+
 $fileName = \sprintf(
     'forms/%s-%s.txt',
     \date('Y-m-d-H-i-s'),
-    encrypt(10, $_POST["title"])
+    \substr(\md5($_POST["title"], 0, 8)
 );
     \file_put_contents($fileName, $_POST['content']);
 }
