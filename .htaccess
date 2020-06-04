@@ -1,3 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine On
+RewriteRule \.(css|js|png|jpg|gif)$ - [L]
 RewriteRule ^(.*)$ index.php [NC,L]
