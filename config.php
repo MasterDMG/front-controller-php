@@ -6,6 +6,7 @@ $url = [
     '/wyslij-formularz' => 'contact-form.php',
     '/lorem' => 'articles/lorem.txt',
     '/ipsum' => 'articles/ipsum.txt',
-    '/dolor' => 'articles/dolor.txt'
+    '/dolor' => 'articles/dolor.txt',
+    '/formularze' => 'forms.php'
     
 ];
