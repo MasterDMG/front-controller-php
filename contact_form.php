@@ -6,8 +6,10 @@ if($_POST){
         \date('Y-m-d-H-i-s'),
         \substr(\md5($_POST["title"]), 0, 8)
     );
-
-    \file_put_contents($fileName, $_POST['content']);
+    $form_content=$_POST['title'].'<br>'.$_POST['content'];
+    
+    \file_put_contents($fileName, $form_content);
+   
 }
 
 header('Location: http://localhost/kontakt');
