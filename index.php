@@ -1,7 +1,7 @@
 <?php 
 
 require_once('config.php');
-if ($_SERVER['REQUEST_URI'] !== '/wyslij-formularz') {
+if ($_SERVER['REQUEST_URI'] !== '/wyslij-formularz' && $_SERVER['REQUEST_URI'] !== '/dodaj-artykuly') {
     require_once('header.php');
 }
 
