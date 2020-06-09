@@ -20,3 +20,14 @@
         ?>
     </div>
     <div id="content">
+<?php
+
+if (isset($_SESSION['messages'])) {
+    echo '<div class="messages">';
+    foreach ($_SESSION['messages'] as $message) {
+        echo $message . '<br/>';
+    }
+    echo '</div>';
+
+    unset($_SESSION['messages']);
+}

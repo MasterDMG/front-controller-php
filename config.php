@@ -17,19 +17,20 @@ $catalog = 'forms/.';
 $files = scandir($catalog);
 
 foreach($files as $file){
-    
+    $pathInfoForm = pathinfo($file);
+    if ($pathInfoForm['extension'] === 'txt') {
         $route = '/' . \substr($file, 0, -4);
         $url[$route] = 'form.php'; 
-    
+    }
 }
 
 $catalog2 = 'articles/.';
 $files2 = scandir($catalog2);
 
 foreach($files2 as $file2){
-       
-            $route2 = '/' . \substr($file2, 0, -4);
-            $url[$route2] = 'article.php';
-        
+    $pathInfoArticle = pathinfo($file2);
+    if ($pathInfoArticle['extension'] === 'txt') {
+        $route2 = '/' . \substr($file2, 0, -4);
+        $url[$route2] = 'article.php';
+    }
 }
-

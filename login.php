@@ -1,21 +1,32 @@
 <?php
+
+$username = 'marcel';
+$password = 'pass';
+
 if($_POST){
-    global $log=false;
-    $login=$_POST['login'].'-'.$_POST['pass'];
-    $user_catalog = 'USER_DATA/.';
-    $users = scandir($user_catalog);
-    
-    foreach($users as $user){
-        
-            $user_data =\substr($user, 0, -4);
-            if($user_data==$login){
-                $log=true;
-                echo'Zalogowano';
-                die;
-            }
-        
+    if (isset($_SESSION['user'])) {
+        $messages = [
+            'Jesteś aktualnie zalogowany!',
+        ];
+        $_SESSION['messages'] = $messages;
+
+        header('Location: http://localhost'); 
+        exit;
     }
-    echo'blędne dane';
-    
-    
+
+    if ($_POST['login'] === $username && $_POST['pass'] === $password) {
+        $userData = [
+            'name' => $username,
+        ];
+
+        $_SESSION['user'] = $userData;
+
+        $messages = [
+            'Zostałeś poprawnie zalogowany!',
+        ];
+        $_SESSION['messages'] = $messages;
+    }
 }
+
+header('Location: http://localhost'); 
+exit;

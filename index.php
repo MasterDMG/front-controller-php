@@ -1,7 +1,13 @@
 <?php 
 
+session_start();
+
 require_once('config.php');
-if ($_SERVER['REQUEST_URI'] !== '/wyslij-formularz' && $_SERVER['REQUEST_URI'] !== '/dodaj-artykuly') {
+if (
+    $_SERVER['REQUEST_URI'] !== '/wyslij-formularz' 
+    && $_SERVER['REQUEST_URI'] !== '/dodaj-artykuly'
+    && $_SERVER['REQUEST_URI'] !== '/logowanie'
+) {
     require_once('header.php');
 }
 
