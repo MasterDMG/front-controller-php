@@ -7,7 +7,10 @@
 - [x] Stwórz podstronę formularze, na której po wejściu wyświetli się lista formularzy przesłanych za pomoca formularza kontaktowego, każdy element listy powinien być podlinkowany do podstrony na której będą szczegoły przesłanego formularza, czyli: tytuł, data oraz treść
 - [x] Przygotuj podstronę na której będzie prezentowana lista artykułów (lorem, ipsum, dolor)
 - [x] Przygotuj menu które znajdzie się w nagłówku strony, menu powinno zawierać linki do takich podstron jak strona główna, kontakt, lista formularzy, lista artykułów
-- [] Przygotuj formularz dzięki któremu będzie można dodać nowy artykuł, powinien zostać on zapisany w katalogu article, formularz powinien posiadać dwa pola tytuł, oraz treść
+- [x] Przygotuj formularz dzięki któremu będzie można dodać nowy artykuł, powinien zostać on zapisany w katalogu article, formularz powinien posiadać dwa pola tytuł, oraz treść
 - [] Rozszerz formularz dodawania artykułu o opcję wgrania artykułu z pliku (format html lub txt)
-- [] Przygotuj możliwość logowania na stronie
+- [x] Przygotuj możliwość logowania na stronie
 - [] Zadbaj aby formularz dodawania nowych artukułów był dostępny jedynie dla zalogowanego użytkownika
+- [] Dodaj podstronę wylogowania użytkownika, podepnij ją pod menu
+- [] Przenieś dane logowania użytkowników do osobnej tablicy w pliku config.php, tak aby można było przechowywać w jednym miejscu dane dostępowe wielu użytkowników, obsłuż tą formę przechowywania danych
+- [] Podepnij mechanizm szyfrowania haseł użytkowników (może być algorytmem md5, nie jest bezpieczny, ale do prezentacji idei wystarczy), tak aby hasła nie były przechowywane jako plain text
