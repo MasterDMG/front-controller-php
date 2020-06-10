@@ -8,9 +8,12 @@ $url = [
     '/artykuly' => 'articles.php',
     '/zaloguj' => 'login-form.php',
     '/logowanie' => 'login.php',
-    '/rejestracja' => 'register.php',
+    '/rejestracja' => 'register-form.php',
+    '/zarejestruj' => 'register.php',
     '/dodaj-artykuly' => 'add-article.php',
-    '/dodaj-artykul' => 'article-form.php'
+    '/dodaj-artykul' => 'article-form.php',
+    '/wyloguj' => 'logout.php',
+    '/sprawdz' => 'checklog.php'
 ];
 
 $catalog = 'forms/.';
@@ -34,3 +37,6 @@ foreach($files2 as $file2){
         $url[$route2] = 'article.php';
     }
 }
+$users=[
+    'marcel' => md5('pass'),
+];
