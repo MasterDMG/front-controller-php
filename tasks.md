@@ -10,7 +10,11 @@
 - [x] Przygotuj formularz dzięki któremu będzie można dodać nowy artykuł, powinien zostać on zapisany w katalogu article, formularz powinien posiadać dwa pola tytuł, oraz treść
 - [] Rozszerz formularz dodawania artykułu o opcję wgrania artykułu z pliku (format html lub txt)
 - [x] Przygotuj możliwość logowania na stronie
-- [] Zadbaj aby formularz dodawania nowych artukułów był dostępny jedynie dla zalogowanego użytkownika
-- [] Dodaj podstronę wylogowania użytkownika, podepnij ją pod menu
-- [] Przenieś dane logowania użytkowników do osobnej tablicy w pliku config.php, tak aby można było przechowywać w jednym miejscu dane dostępowe wielu użytkowników, obsłuż tą formę przechowywania danych
+- [x] Zadbaj aby formularz dodawania nowych artukułów był dostępny jedynie dla zalogowanego użytkownika
+- [x] Dodaj podstronę wylogowania użytkownika, podepnij ją pod menu
+- [x] Przenieś dane logowania użytkowników do osobnej tablicy w pliku config.php, tak aby można było przechowywać w jednym miejscu dane dostępowe wielu użytkowników, obsłuż tą formę przechowywania danych
 - [] Podepnij mechanizm szyfrowania haseł użytkowników (może być algorytmem md5, nie jest bezpieczny, ale do prezentacji idei wystarczy), tak aby hasła nie były przechowywane jako plain text
+- [] Dodaj powiadomienia we wszystkich elementach stronki, na zapisaniu formularza, wylogowaniu, próbie dodania artykułu, po pomyślnym dodaniu artykułu
+- [] Zabezpiecz dodawanie nowego artykułu aby wgranie artykułu o tym samym tytule nie powodowało nadpisania instniejącego, w tym przypadku użytkownik powinien dostać komunikat, że taki artykuł już istnieje i zostać przekierowany z powrotem na formularz dodawania artykułów
+- [] przenieś dane użytkowników do pliku users.csv
+- [] przygotuj rejestrację użytkowników
