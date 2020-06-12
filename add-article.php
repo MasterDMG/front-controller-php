@@ -10,6 +10,7 @@ if($_POST){
         }
         return false;
     }
+   
     if(check($_POST['article-title'])==false){
     $articleName = \sprintf(
         'articles/%s.txt',

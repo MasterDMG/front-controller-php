@@ -9,7 +9,7 @@ if (
     && $_SERVER['REQUEST_URI'] !== '/logowanie'
     && $_SERVER['REQUEST_URI'] !== '/wyloguj'
     && $_SERVER['REQUEST_URI'] !== '/sprawdz'
-    && $_SERVER['REQUEST_URI'] !== '/rejestracja'
+    && $_SERVER['REQUEST_URI'] !== '/zarejestruj'
     ) {
 
     require_once('header.php');

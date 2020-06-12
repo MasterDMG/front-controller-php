@@ -5,4 +5,5 @@
     $user_data = fopen('users.csv','a');
     fwrite($user_data, $login.','.$password.PHP_EOL);
     header('Location: http://localhost/rejestracja');
+    exit;
     
