@@ -13,4 +13,5 @@ if($_POST){
 }
 
 header('Location: http://localhost/kontakt');
+
 exit;

@@ -3,7 +3,7 @@
 
 
 if($_POST){
-    include_once('config.php');
+  
     if (isset($_SESSION['user'])) {
         $messages = [
             'Jesteś aktualnie zalogowany!',

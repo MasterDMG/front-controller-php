@@ -16,8 +16,13 @@
         <a href='/rejestracja'>ZAREJESTRUJ</a><br>
         <?php
             echo'<a href="/sprawdz">DODAJ ARTYKUL</a><br>';
-            if(!isset($_SESSION['user']))echo"<a href='/zaloguj'>ZALOGUJ</a><br>";
-            else echo"<a href='/wyloguj'>WYLOGUJ</a><br>";
+            if(!isset($_SESSION['user'])){
+                echo"<a href='/zaloguj'>ZALOGUJ</a><br>";
+            
+            }
+            else {
+                echo"<a href='/wyloguj'>WYLOGUJ</a><br>";
+            }
         ?>
     </div>
     <div id="content">

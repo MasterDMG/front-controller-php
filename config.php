@@ -37,6 +37,4 @@ foreach($files2 as $file2){
         $url[$route2] = 'article.php';
     }
 }
-$users=[
-    'marcel' => md5('pass'),
-];
+
