@@ -13,11 +13,11 @@ if($_POST){
         header('Location: http://localhost'); 
         exit;
     }
-    $plik=fopen('users.csv','r');
+    $users=fopen('users.csv','r');
     $tab= array();
-    while(!feof($plik)){
-        $linia = fgets($plik);
-        $tab=(explode(",",$linia));
+    while(!feof($users)){
+        $line = fgets($users);
+        $tab=(explode(",",$line));
         
         $login=trim($tab[0]);
         $pass=trim($tab[1]);

@@ -8,6 +8,6 @@
 <?php 
 include('messages.php');
 
-    echo "<br> elko";
+    echo "<br> $message";
 
 

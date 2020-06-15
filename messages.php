@@ -1,3 +1,3 @@
 <?php
-$message="";
+$message='Wysłano Formularz';
 $bool=false;
