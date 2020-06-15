@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Moja Stronka</title>
-        <link rel="stylesheet" href="style.css">  
+        <link rel="stylesheet" href="/css/styles.css">  
     </head>
     <body>
     <div id="main">

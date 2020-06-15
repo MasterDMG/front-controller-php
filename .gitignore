@@ -5,3 +5,4 @@ USER_DATA/*
 articles/*
 !articles/.gitkeep
 node_modules
+css/styles.css

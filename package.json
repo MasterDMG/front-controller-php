@@ -1,0 +1,22 @@
+{
+  "name": "front-controller-php",
+  "version": "1.0.0",
+  "description": "simple cms app",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterDMG/front-controller-php.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MasterDMG/front-controller-php/issues"
+  },
+  "homepage": "https://github.com/MasterDMG/front-controller-php#readme",
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  }
+}
