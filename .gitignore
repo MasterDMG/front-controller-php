@@ -4,3 +4,4 @@ USER_DATA/*
 !USER_DATA/.gitkeep
 articles/*
 !articles/.gitkeep
+node_modules
