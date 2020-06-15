@@ -19,8 +19,8 @@ if($_POST){
         $linia = fgets($plik);
         $tab=(explode(",",$linia));
         
-        $login=$tab[0];
-        $pass=$tab[1];
+        $login=trim($tab[0]);
+        $pass=trim($tab[1]);
         if ($_POST['login']===$login && md5($_POST['pass'])===$pass) {
             $userData = [
                 'name' => $username,

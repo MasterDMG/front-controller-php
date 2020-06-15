@@ -9,9 +9,11 @@ if($_POST){
     $form_content=$_POST['title'].'<br>'.$_POST['content'];
     
     \file_put_contents($fileName, $form_content);
-   
+    
 }
-
+include('messages.php');
+$message='Wysłano Formularz';
+$bool=true;
 header('Location: http://localhost/kontakt');
 
 exit;
