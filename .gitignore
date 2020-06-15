@@ -4,5 +4,6 @@ USER_DATA/*
 !USER_DATA/.gitkeep
 articles/*
 !articles/.gitkeep
+users.csv
 node_modules
 css/styles.css

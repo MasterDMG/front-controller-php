@@ -6,8 +6,10 @@
 </form>
 
 <?php 
-include('messages.php');
-
-    echo "<br> $message";
+if($_POST){
+    require('functions.php');
+    adding('contact');
+    echo "Wysłano";
+}
 
 
