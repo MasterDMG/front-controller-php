@@ -16,16 +16,8 @@ $url = [
     '/sprawdz' => 'checklog.php'
 ];
 
-$catalog = 'forms/.';
-$files = scandir($catalog);
-
-foreach($files as $file){
-    $pathInfoForm = pathinfo($file);
-    if ($pathInfoForm['extension'] === 'txt') {
-        $route = '/' . \substr($file, 0, -4);
-        $url[$route] = 'form.php'; 
-    }
-}
+require_once('functions.php');
+dynamic_routing('forms');
 
 $catalog2 = 'articles/.';
 $files2 = scandir($catalog2);

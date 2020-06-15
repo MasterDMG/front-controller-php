@@ -7,6 +7,6 @@
 <?php
 if($_POST){
     require('functions.php');
-    adding('article');
+    add_article();
     echo "Wysłano";
 }

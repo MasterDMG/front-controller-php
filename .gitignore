@@ -1,7 +1,5 @@
 forms/*
 !forms/.gitkeep
-USER_DATA/*
-!USER_DATA/.gitkeep
 articles/*
 !articles/.gitkeep
 users.csv
