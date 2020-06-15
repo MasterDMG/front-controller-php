@@ -18,3 +18,5 @@
 - [] Zabezpiecz dodawanie nowego artykułu aby wgranie artykułu o tym samym tytule nie powodowało nadpisania instniejącego, w tym przypadku użytkownik powinien dostać komunikat, że taki artykuł już istnieje i zostać przekierowany z powrotem na formularz dodawania artykułów
 - [] przenieś dane użytkowników do pliku users.csv
 - [] przygotuj rejestrację użytkowników
+- [] przygotuj opcję edycji menu przez zalogowanych użytkowników, w tym celu przygptuj plik menu.csv z którego będzie pobierane menu
+- [] aplikacja ma wiele fragmentów powielającego się kodu, aby tego uniknąć stwórz kilka funkcji: funkcję do pobierania listy plików z obrębu katalogu, funkcję do przekierowań, funkcję do zapisu treści do pliku
