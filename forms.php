@@ -1,3 +1,2 @@
 <?php
-require('functions.php');
-display('forms');
+echo returnFilesList('forms');

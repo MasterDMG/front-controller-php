@@ -1,8 +1,11 @@
 <?php 
 
+var_dump('test');
+
 session_start();
 
 require_once('config.php');
+
 if (
     $_SERVER['REQUEST_URI'] !== '/wyslij-formularz' 
     && $_SERVER['REQUEST_URI'] !== '/dodaj-artykuly'
@@ -14,6 +17,8 @@ if (
 
     require_once('header.php');
 }
+
+$url = \array_merge($url, dynamic_routing('forms'));
 
 if (\array_key_exists($_SERVER['REQUEST_URI'], $url)) {
     require_once($url[$_SERVER['REQUEST_URI']]);

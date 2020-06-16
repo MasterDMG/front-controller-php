@@ -4,9 +4,17 @@
     Dodaj własny plik:<input type="file" name="fileToUpload" id="fileToUpload"><br>
     <input type="submit">
 </form>
+
 <?php
+
 if($_POST){
-    require('functions.php');
-    add_article();
-    echo "Wysłano";
+    if(check($_POST['title'])==true;){
+        addArticle();
+        echo "Wysłano";
+
+    } else {
+        echo' błąd wysyłania';
+    }
+
+   
 }

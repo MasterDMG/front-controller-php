@@ -1,5 +1,7 @@
 <?php
 
+require_once('functions.php');
+
 $url = [
     '/' => 'home.php',
     '/kontakt' => 'contact.php',
@@ -15,9 +17,6 @@ $url = [
     '/wyloguj' => 'logout.php',
     '/sprawdz' => 'checklog.php'
 ];
-
-require_once('functions.php');
-dynamic_routing('forms');
 
 $catalog2 = 'articles/.';
 $files2 = scandir($catalog2);
