@@ -1,29 +1,32 @@
 <?php
 
-function dynamicRouting($place)
+class Router
 {
-    $urls = [];
-    $catalog = $place.'s/.';
-    $files = scandir($catalog);
+    public static function dynamicRouting($place)
+    {
+        $urls = [];
+        $catalog = $place.'s/.';
+        $files = scandir($catalog);
 
-    foreach($files as $file){
-        $pathInfoForm = pathinfo($file);
-        if ($pathInfoForm['extension'] === 'txt') {
-            $route = '/' . \substr($file, 0, -4);
-            $urls[$route] = $place.'.php'; 
+        foreach($files as $file){
+            $pathInfoForm = pathinfo($file);
+            if ($pathInfoForm['extension'] === 'txt') {
+                $route = '/' . \substr($file, 0, -4);
+                $urls[$route] = $place.'.php'; 
+            }
         }
-    }
 
-    return $urls;
+        return $urls;
+    }
 }
 
 function check($title) {
-    if(!isset($_FILE["fileToUpload"] 
+    if(!isset($_FILE["fileToUpload"]) 
     && $_POST['title'] == '' 
-    && $_POST['content' == '']){
+    && $_POST['content' == '']) {
         return true;
     } else {
-    $catalog = 'articles/.';
+    $catalog = '../articles/.';
     $files = scandir($catalog);
 
     foreach($files as $file){
@@ -39,7 +42,7 @@ function check($title) {
 function addArticle(){
     
     if($_POST['article-title'] == "") {
-        $target_dir = "articles/";
+        $target_dir = "../articles/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);  
 
@@ -90,10 +93,13 @@ function returnFilesList($place) {
     return $result;
 }
 
-function showContent($place){
-    $file = $_SERVER['REQUEST_URI'] . '.txt';
-    $content = file_get_contents($place.'/.'.$file);
-    return $conetent;
-    
+class Render
+{
+    public static function showContent($place){
+        $file = $_SERVER['REQUEST_URI'] . '.txt';
+        $content = file_get_contents($place.'/.'.$file);
+        return $content;
+        
+    }
 }
 

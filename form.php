@@ -1,3 +1,3 @@
 <?php
 
-echo showContent('form');
+echo Render::showContent('form');

@@ -18,7 +18,7 @@ $url = [
     '/sprawdz' => 'checklog.php'
 ];
 
-$catalog2 = 'articles/.';
+$catalog2 = '../data/articles/.';
 $files2 = scandir($catalog2);
 
 foreach($files2 as $file2){

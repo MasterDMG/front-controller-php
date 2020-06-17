@@ -1,10 +1,8 @@
 <?php 
 
-var_dump('test');
-
 session_start();
 
-require_once('config.php');
+require_once('../config.php');
 
 if (
     $_SERVER['REQUEST_URI'] !== '/wyslij-formularz' 
@@ -15,18 +13,18 @@ if (
     && $_SERVER['REQUEST_URI'] !== '/zarejestruj'
     ) {
 
-    require_once('header.php');
+    require_once('../header.php');
 }
 
-$url = \array_merge($url, dynamicRouting('form'));
-$url = \array_merge($url, dynamicRouting('article'));
+$url = \array_merge($url, Router::dynamicRouting('../data/form'));
+$url = \array_merge($url, Router::dynamicRouting('../data/article'));
 
 if (\array_key_exists($_SERVER['REQUEST_URI'], $url)) {
-    require_once($url[$_SERVER['REQUEST_URI']]);
+    require_once('../' . $url[$_SERVER['REQUEST_URI']]);
 } else {
-    require_once('404.php');
+    require_once('../404.php');
 }
 
-require_once('footer.php');
+require_once('../footer.php');
 
 exit;

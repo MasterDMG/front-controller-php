@@ -1,7 +1,8 @@
-forms/*
-!forms/.gitkeep
-articles/*
-!articles/.gitkeep
-users.csv
+/data/forms/*
+!/data/forms/.gitkeep
+/data/articles/*
+!/data/articles/.gitkeep
+/data/users.csv
+/data/menu.csv
 node_modules
-public/css/styles.css
+/public/css/styles.css
