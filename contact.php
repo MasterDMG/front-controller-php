@@ -1,9 +1,9 @@
-<form name="Kontakt" method="POST" action="http://localhost/kontakt" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    Tytul :<input type="text" name="title" required><br>
-    Treść :<textarea name="content"></textarea><br>
-    
-    <!-- <input type="submit" class="btn btn-blue"> -->
-    <button class="btn btn-blue" type="button">Wyślij</button>
+<form name="Kontakt" method="POST" action="http://localhost/contact" class="form w-2/4 mx-auto">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" name="title" class="form-input" required>
+    <label for="content"  class="form-label">Content:</label>
+    <textarea name="content" rows="10" cols="50" class="form-input"></textarea><br>
+    <button class="button btn-blue" type="button">Wyślij</button>
 </form>
 
 <?php 

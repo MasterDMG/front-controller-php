@@ -4,13 +4,13 @@ require_once('functions.php');
 
 $url = [
     '/' => 'home.php',
-    '/kontakt' => 'contact.php',
+    '/contact' => 'contact.php',
     '/wyslij-formularz' => 'contact_form.php',
-    '/formularze' => 'forms.php',
-    '/artykuly' => 'articles.php',
+    '/forms' => 'forms.php',
+    '/articles' => 'articles.php',
     '/zaloguj' => 'login-form.php',
     '/logowanie' => 'login.php',
-    '/rejestracja' => 'register-form.php',
+    '/sign-up' => 'register-form.php',
     '/zarejestruj' => 'register.php',
     '/dodaj-artykuly' => 'add-article.php',
     '/dodaj-artykul' => 'article-form.php',

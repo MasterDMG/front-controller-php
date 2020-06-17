@@ -1,6 +1,7 @@
-                </div>
-                <div id="footer" class="bg-teal-700 row-span-1 col-span-3 p-10">Simple CMS <?php echo date('Y'); ?></div>
             </div>
         </div>
+        <footer class='w-full text-center border-t border-gray-400 py-6 pin-b'>
+            Simple CMS <?php echo date('Y'); ?>
+        </footer>
     </body>
 </html>
