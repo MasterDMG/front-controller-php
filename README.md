@@ -16,6 +16,7 @@ docker-compose up -f docker/docker-compose.yml -d
 
 ```bash
 npm install
+npx tailwindcss build css/styles.css -o public/css/styles.css
 ```
 
 ## Useful commands

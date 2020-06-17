@@ -21,7 +21,7 @@ class Router
 }
 
 function check($title) {
-    if(!isset($_FILE["fileToUpload"]) 
+    if(!isset($_FILES["fileToUpload"]) 
     && $_POST['title'] == '' 
     && $_POST['content' == '']) {
         return true;
