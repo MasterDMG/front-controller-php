@@ -1,3 +1,3 @@
 <?php
 
-echo showContent('articles');
+echo Render::showContent('../data/articles');

@@ -1,2 +1,2 @@
 <?php
-echo returnFilesList('forms');
+echo returnFilesList('../data/forms');

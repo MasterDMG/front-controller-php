@@ -2,7 +2,7 @@
 
 class Router
 {
-    public static function dynamicRouting($place)
+    public static function dynamicRouting($place, $handler)
     {
         $urls = [];
         $catalog = $place.'s/.';
@@ -12,7 +12,7 @@ class Router
             $pathInfoForm = pathinfo($file);
             if ($pathInfoForm['extension'] === 'txt') {
                 $route = '/' . \substr($file, 0, -4);
-                $urls[$route] = $place.'.php'; 
+                $urls[$route] = $handler . '.php'; 
             }
         }
 
@@ -95,11 +95,11 @@ function returnFilesList($place) {
 
 class Render
 {
-    public static function showContent($place){
+    public static function showContent($place)
+    {
         $file = $_SERVER['REQUEST_URI'] . '.txt';
-        $content = file_get_contents($place.'/.'.$file);
+        $content = file_get_contents($place . $file);
+
         return $content;
-        
     }
 }
-

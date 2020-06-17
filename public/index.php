@@ -16,8 +16,8 @@ if (
     require_once('../header.php');
 }
 
-$url = \array_merge($url, Router::dynamicRouting('../data/form'));
-$url = \array_merge($url, Router::dynamicRouting('../data/article'));
+$url = \array_merge($url, Router::dynamicRouting('../data/form', 'form'));
+$url = \array_merge($url, Router::dynamicRouting('../data/article', 'article'));
 
 if (\array_key_exists($_SERVER['REQUEST_URI'], $url)) {
     require_once('../' . $url[$_SERVER['REQUEST_URI']]);

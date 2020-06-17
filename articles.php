@@ -1,2 +1,2 @@
 <?php
-returnFilesList('article');
+echo returnFilesList('../data/articles');
