@@ -18,7 +18,8 @@ if (
     require_once('header.php');
 }
 
-$url = \array_merge($url, dynamic_routing('forms'));
+$url = \array_merge($url, dynamicRouting('form'));
+$url = \array_merge($url, dynamicRouting('article'));
 
 if (\array_key_exists($_SERVER['REQUEST_URI'], $url)) {
     require_once($url[$_SERVER['REQUEST_URI']]);

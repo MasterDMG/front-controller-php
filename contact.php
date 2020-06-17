@@ -8,7 +8,7 @@
 
 <?php 
 if($_POST){
-    add_contact();
+    addContact();
     echo "Wysłano";
 }
 

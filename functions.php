@@ -1,16 +1,16 @@
 <?php
 
-function dynamic_routing($place)
+function dynamicRouting($place)
 {
     $urls = [];
-    $catalog = $place.'/.';
+    $catalog = $place.'s/.';
     $files = scandir($catalog);
 
     foreach($files as $file){
         $pathInfoForm = pathinfo($file);
         if ($pathInfoForm['extension'] === 'txt') {
             $route = '/' . \substr($file, 0, -4);
-            $urls[$route] = 'form.php'; 
+            $urls[$route] = $place.'.php'; 
         }
     }
 
@@ -61,7 +61,7 @@ function addArticle(){
     return false;
 }
 
-function add_contact(){
+function addContact(){
     $fileName = \sprintf(
         'forms/%s-%s.txt',
         \date('Y-m-d-H-i-s'),
@@ -88,5 +88,12 @@ function returnFilesList($place) {
     $result .= '</ol>';
 
     return $result;
+}
+
+function showContent($place){
+    $file = $_SERVER['REQUEST_URI'] . '.txt';
+    $content = file_get_contents($place.'/.'.$file);
+    return $conetent;
+    
 }
 

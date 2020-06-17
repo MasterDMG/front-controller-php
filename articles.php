@@ -1,2 +1,2 @@
 <?php
-display('articles');
+returnFilesList('article');
