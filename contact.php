@@ -8,11 +8,11 @@
 </form>
 
 <?php 
-if($_POST){
 
-    use Contact\Repository;
+use Contact\Repository;
+
+if($_POST){    
     Repository::addContact();
-
 }
 
 

@@ -1,8 +1,9 @@
 <?php
 
-if($_POST){
+if ($_POST){
     if (isset($_SESSION['user'])) {
         MessageBag::addMessage('Jesteś aktualnie zalogowany!', MessageBag::INFO);
+        MessageBag::addMessage('test!');
         
         header('Location: http://localhost'); 
         exit;
@@ -17,7 +18,7 @@ if($_POST){
         exit;
     }
 
-    while(!feof($users)){
+    while (!feof($users)){
         $line = fgets($users);
         $lineData = explode(',', $line);
         
