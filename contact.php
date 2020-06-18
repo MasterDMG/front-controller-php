@@ -3,13 +3,16 @@
     <input type="text" name="title" class="form-input" required>
     <label for="content"  class="form-label">Content:</label>
     <textarea name="content" rows="10" cols="50" class="form-input"></textarea><br>
-    <button class="button btn-blue" type="button">Wyślij</button>
+    <input type='submit' class='button btn-blue' value="Wyślij">
+    
 </form>
 
 <?php 
 if($_POST){
-    addContact();
-    echo "Wysłano";
+
+    use Contact\Repository;
+    Repository::addContact();
+
 }
 
 

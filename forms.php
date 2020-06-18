@@ -1,2 +1,5 @@
 <?php
-echo returnFilesList('../data/forms');
+
+use Display\Repository;
+
+echo Repository::returnFilesList('../data/forms');

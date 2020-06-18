@@ -1,2 +1,3 @@
 <?php
-echo returnFilesList('../data/articles');
+use Display\Repository;
+echo Repository::returnFilesList('../data/articles');

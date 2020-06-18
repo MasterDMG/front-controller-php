@@ -8,8 +8,9 @@
 <?php
 
 if($_POST){
-    if(check($_POST['title'])==true;){
-        addArticle();
+    if(Validator::check($_POST['title'])==true;){
+        use Article\Repository;
+        Repository::addArticle();
         echo "Wysłano";
 
     } else {
