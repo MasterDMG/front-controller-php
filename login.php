@@ -2,48 +2,35 @@
 
 if($_POST){
     if (isset($_SESSION['user'])) {
-        $messages = [
-            'Jesteś aktualnie zalogowany!',
-        ];
-        $_SESSION['messages'] = $messages;
+        MessageBag::addMessage('Jesteś aktualnie zalogowany!', MessageBag::INFO);
         
         header('Location: http://localhost'); 
         exit;
     }
 
-    $users = @fopen('users.csv','r');
+    $users = @fopen('../data/users.csv','r');
 
     if ($users === false) {
-        $messages = [
-            'Błąd odczytu pliku!',
-        ];
-        $_SESSION['messages'] = $messages;
+        MessageBag::addMessage('Błąd odczytu pliku!');
 
         header('Location: http://localhost');
         exit;
     }
 
-    $tab = [];
-
     while(!feof($users)){
         $line = fgets($users);
-        $tab=(explode(",",$line));
+        $lineData = explode(',', $line);
         
-        $login=trim($tab[0]);
-        $pass=trim($tab[1]);
-        if ($_POST['login']===$login && md5($_POST['pass'])===$pass) {
+        $username = \trim($lineData[0]);
+        $password = \trim($lineData[1]);
+
+        if ($_POST['login'] === $username && md5($_POST['pass']) === $password) {
             $userData = [
                 'name' => $username,
             ];
-
             $_SESSION['user'] = $userData;
-            $_SESION['logged'] = 1;
-            $messages = [
-                'Zostałeś poprawnie zalogowany!',
-            ];
-            $_SESSION['messages'] = $messages;
             
-           
+            MessageBag::addMessage('Zostałeś poprawnie zalogowany!', MessageBag::SUCCESS);
         }
     }
 }

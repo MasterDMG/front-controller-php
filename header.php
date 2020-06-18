@@ -11,12 +11,12 @@
         <div class="container mx-auto py-10">
 <?php
 
-if (isset($_SESSION['messages'])) {
+if (MessageBag::hasMessages()) {
     echo '<div class="messages">';
-    foreach ($_SESSION['messages'] as $message) {
-        echo $message . '<br/>';
+    foreach (MessageBag::getMessages() as $message) {
+        require('message.php');
     }
     echo '</div>';
 
-    unset($_SESSION['messages']);
+    
 }
