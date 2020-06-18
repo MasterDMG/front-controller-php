@@ -7,7 +7,7 @@ require_once('../config.php');
 if (
     $_SERVER['REQUEST_URI'] !== '/wyslij-formularz' 
     && $_SERVER['REQUEST_URI'] !== '/dodaj-artykuly'
-    && $_SERVER['REQUEST_URI'] !== '/logowanie'
+    && $_SERVER['REQUEST_URI'] !== '/login'
     && $_SERVER['REQUEST_URI'] !== '/wyloguj'
     && $_SERVER['REQUEST_URI'] !== '/sprawdz'
     && $_SERVER['REQUEST_URI'] !== '/zarejestruj'

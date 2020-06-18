@@ -1,9 +1,6 @@
 <?php
 
-
-
 if($_POST){
-  
     if (isset($_SESSION['user'])) {
         $messages = [
             'Jesteś aktualnie zalogowany!',
@@ -13,8 +10,21 @@ if($_POST){
         header('Location: http://localhost'); 
         exit;
     }
-    $users=fopen('users.csv','r');
-    $tab= array();
+
+    $users = @fopen('users.csv','r');
+
+    if ($users === false) {
+        $messages = [
+            'Błąd odczytu pliku!',
+        ];
+        $_SESSION['messages'] = $messages;
+
+        header('Location: http://localhost');
+        exit;
+    }
+
+    $tab = [];
+
     while(!feof($users)){
         $line = fgets($users);
         $tab=(explode(",",$line));
@@ -37,6 +47,7 @@ if($_POST){
         }
     }
 }
+
 header('Location: http://localhost');
 exit;
 

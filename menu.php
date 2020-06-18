@@ -12,6 +12,7 @@
                 <a href="/forms" class="menu-item">Forms</a>
                 <a href="/articles" class="menu-item">Articles</a>
                 <a href="/sign-up" class="menu-item">Sign up</a>
+                <a href="/sign-in" class="menu-item">Sign in</a>
             </div>
         </div>
     </div>
