@@ -15,7 +15,7 @@ $url = [
     '/dodaj-artykuly' => 'add-article.php',
     '/dodaj-artykul' => 'article-form.php',
     '/wyloguj' => 'logout.php',
-    '/sprawdz' => 'checklog.php'
+    '/checklog' => 'checklog.php'
 ];
 
 $catalog2 = '../data/articles/.';

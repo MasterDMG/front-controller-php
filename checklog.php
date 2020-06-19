@@ -4,6 +4,6 @@
         exit;
     }
     else {
-        header('Location: http://localhost/zaloguj');
+        header('Location: http://localhost/login');
         exit;
     }

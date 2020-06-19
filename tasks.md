@@ -8,7 +8,7 @@
 - [x] Przygotuj podstronę na której będzie prezentowana lista artykułów (lorem, ipsum, dolor)
 - [x] Przygotuj menu które znajdzie się w nagłówku strony, menu powinno zawierać linki do takich podstron jak strona główna, kontakt, lista formularzy, lista artykułów
 - [x] Przygotuj formularz dzięki któremu będzie można dodać nowy artykuł, powinien zostać on zapisany w katalogu article, formularz powinien posiadać dwa pola tytuł, oraz treść
-- [] Rozszerz formularz dodawania artykułu o opcję wgrania artykułu z pliku (format html lub txt)
+- [x] Rozszerz formularz dodawania artykułu o opcję wgrania artykułu z pliku (format html lub txt)
 - [x] Przygotuj możliwość logowania na stronie
 - [x] Zadbaj aby formularz dodawania nowych artukułów był dostępny jedynie dla zalogowanego użytkownika
 - [x] Dodaj podstronę wylogowania użytkownika, podepnij ją pod menu

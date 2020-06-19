@@ -9,7 +9,7 @@ class Repository
         $catalog = $place.'/.';
         $files = scandir($catalog);
     
-        $result = '<ol>';
+        $result = '<ul class="list-inside bg-gray-200 ...">';
         foreach($files as $file){
             $pathInfoArticle = pathinfo($file);
     
@@ -17,7 +17,7 @@ class Repository
                 $result .= '<li><a href="'.\substr($file, 0, -4).'">'.$file.'</a></li>';
             }
         }
-        $result .= '</ol>';
+        $result .= '</ul>';
     
         return $result;
     }
